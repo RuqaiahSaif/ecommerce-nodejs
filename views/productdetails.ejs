@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <%- include('./includes/head.ejs')%>
+</head>
+
+<body>
+  <%- include('./includes/header.ejs')%>
+<div>
+  <img width="300" src=" <%= product.thumbnail %> " alt="" />
+  <h4><%= product.title %></h4>
+  <p><%= product.description %></p>
+
+  <hr />
+</div>
+</body>
+<%- include('./includes/footer.ejs')%>
+
+  </html>

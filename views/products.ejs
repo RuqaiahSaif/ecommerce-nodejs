@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<%- include('./includes/head.ejs')%>
+
+
+  <body>
+
+    <%- include('./includes/header.ejs')%>
+      <!-- inner page section -->
+      <section class="inner_page_head">
+        <div class="container_fuild">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="full">
+                <h3>Product Grid</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end inner page section -->
+      <section class="product_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>
+              Our <span>products</span>
+            </h2>
+          </div>
+          <div class="row">
+            <% for( let index=0; index < products.length; index++ ) { %>
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="box">
+                  <div class="option_container">
+                    <div class="options">
+                      <a href="" class="option1">
+                        Add Cart
+                      </a>
+                      <a href="" class="option2">
+                        Buy Now
+                      </a>
+                    </div>
+                  </div>
+                  <div class="img-box">
+                    <img src=<%=products[index].thumbnail %> />
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                      <%=products[index].title %>
+                    </h5>
+                    <h6>
+                      <%=products[index].price %>$
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+          </div>
+      </section>
+      <!-- end product section -->
+
+
+
+
+
+      <%- include('./includes/footer.ejs')%>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <!-- popper js -->
+        <script src="js/popper.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.js"></script>
+        <!-- custom js -->
+        <script src="js/custom.js"></script>
+  </body>
+
+</html>
